@@ -31,7 +31,7 @@ set_image_local(r"pic2.jpg")
 def load_model_file():
     custom_objects = {"LeakyReLU": LeakyReLU}
     try:
-        model_path = r"/workspaces/Predictive_maintainence/model.h5"
+        model_path = r"model.h5"
         if os.path.exists(model_path):
             return load_model(model_path, custom_objects=custom_objects)
         else:
@@ -44,7 +44,7 @@ def load_model_file():
 # Function to load the scaler
 def load_scaler_file():
     try:
-        scaler_path = "/workspaces/Predictive_maintainence/scaler.pkl"
+        scaler_path = "scaler.pkl"
         if os.path.exists(scaler_path):
             with open(scaler_path, "rb") as f:
                 return pickle.load(f)
